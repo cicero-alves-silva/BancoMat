@@ -3,25 +3,23 @@ package aplicacao;
 public class Main {
     public static void main(String[] args) {
         Conta conta1 = new Conta();
+        Conta.contadorDeContas++;
         conta1.nomeTitular = "Ana";
         conta1.saldo = 0;
         conta1.depositar(100);
         System.out.println("DADOS DA CONTA");
         System.out.println("TITULAR: " + conta1.nomeTitular);
         System.out.println("SALDO: " + conta1.saldo);
+        System.out.println("QUANT. DE CONTAS: " + Conta.contadorDeContas);
+        System.out.println("==================================");
 
-        Conta c2 = new Conta();
-        c2.saldo = 1000;
-        c2.nomeTitular = "Eduardo";
-        c2.depositar(5000);
-        if (c2.sacar(10000)){
-            System.out.println("Saque efetuado com sucesso.");
-        } else {
-            System.out.println("Saldo insuficiente.");
-        }
+        Conta conta2 = new Conta();
+        Conta.contadorDeContas++;
+        conta2.nomeTitular = "Maria";
+        conta2.saldo = 1000;
         System.out.println("DADOS DA CONTA");
-        System.out.println("TITULAR: " + c2.nomeTitular);
-        System.out.println("SALDO: " + c2.saldo);
-
+        System.out.println("TITULAR: " + conta2.nomeTitular);
+        System.out.println("SALDO: " + conta2.saldo);
+        System.out.println("QUANT. DE CONTAS: " + Conta.retornaQuantidadeDeContas());
     }
 }
