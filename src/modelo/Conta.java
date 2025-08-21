@@ -67,4 +67,10 @@ public class Conta {
         System.out.println(nomeBanco + " - CONTA PADRÃO");
     }
 
+    @Override
+    public String toString() {
+        return "nomeTitular= " + nomeTitular +
+                ", numero= " + numero +
+                ", saldo= " + saldo;
+    }
 }
