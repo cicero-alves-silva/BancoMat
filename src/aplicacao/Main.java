@@ -11,15 +11,13 @@ public class Main {
         Conta conta = null;
         Scanner teclado = new Scanner(System.in);
         System.out.println("---MENU DE OPÇÕES---");
-        System.out.println("1- Criar Conta Padrão");
-        System.out.println("2- Criar Conta Poupança");
-        System.out.println("3- Criar Conta Especial");
+        System.out.println("1- Criar Conta Poupança");
+        System.out.println("2- Criar Conta Especial");
         System.out.print("Informe o tipo da conta de Ana: ");
         int opcao = teclado.nextInt();
         switch (opcao) {
-            case 1 -> conta = new Conta("Ana", 100);
-            case 2 -> conta = new ContaPoupanca("Ana", 100);
-            case 3 -> conta = new ContaEspecial("Ana", 100, 100);
+            case 1 -> conta = new ContaPoupanca("Ana", 100);
+            case 2 -> conta = new ContaEspecial("Ana", 100, 100);
             default -> System.out.println("[ERRO] Tipo inválido!");
         }
         conta.imprimeTipoConta("IFPB BANK");
