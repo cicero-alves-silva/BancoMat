@@ -6,6 +6,8 @@ public class ContaPoupanca extends Conta {
     }
 
     public void reajustar(double percentual) {
+//        double rendimento = getSaldo() * percentual;
+//        setSaldo(getSaldo() + rendimento);
         double rendimento = this.saldo * percentual;
         this.saldo += rendimento;
     }
